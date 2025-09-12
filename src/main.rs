@@ -1,7 +1,6 @@
 use clap::{Arg, command};
 use ftail::Ftail;
 use log::LevelFilter;
-//use log::{self, Level};
 use std::env;
 use std::fs::read_to_string;
 
@@ -17,19 +16,7 @@ fn main() {
     let arg0 = env::args().next();
     let my_app_name = arg0.as_deref().unwrap_or("template-tool");
 
-    /*
-       log::trace!("This is a trace message");
-       log::debug!("This is a debug message");
-       log::info!(target: "foo", "bar");
-       log::warn!("This is a warning message");
-       log::error!("This is an error message");
 
-       debug!("Debug log test with macro");
-       trace!("Trace log test with macro");
-       info!("Info log test with macro");
-       warn!("Warn log test with macro");
-       error!("Error log test with macro");
-    */
     // Define command line arguments using clap
     let matches = command!() // requires `cargo` feature
         .version("1.0")

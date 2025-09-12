@@ -1,0 +1,83 @@
+Be careful : This is my first RUST programm... don't judge !
+But it works (seams to...)
+
+## Usage
+
+1. Install Rust and clone this repository.
+2. Build the project with `cargo build`.
+3. Run the tool using `cargo run`.
+
+### Authorized Options
+
+TemplateTool supports the following command-line options:
+
+- `-i input_filname` : Specify the input job file. This file contains a list of work to do.
+- `-l log_level`: Set the log level for the app. 
+
+### Input job file description
+this file can contain multiple sections for describing the jobs to do :
+a job is described by a section of multiples lines :
+    - a input filename (with contains token to replace)
+    - a output filename (for the result)
+    - multiples lines for the remplacement to do
+    - a end of job descrpition 
+Th syntax of a line is :
+keyword ["if";"of";"r";"do"] separator [';'] optional_token separator [';'] optional_value
+like :
+if;finelname    
+of;filename     
+r;token;string  
+do;             
+
+### Token Replacement
+
+TemplateTool allows you to specify multiple tokens and their corresponding values for replacement in the destination files. Tokens are placeholders within your template files (e.g., `{{PROJECT_NAME}}`, `{{AUTHOR}}`). When generating a new project, you can provide values for these tokens, and TemplateTool will automatically replace them throughout the generated files. This enables flexible and dynamic project customization based on your input.
+
+an example for personnal card generation for Home Assistant.
+The generic card is provided in the file TEMPLATE-carte-thermostat-perso.yaml
+witch contains $$$TITRE$$ to be repalce by th title of the card and $$$TST$$$ to be replaced by the name of the virtual thermostat.
+The example generate multiples cards on this model with the job file desctiption like this :
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_alexis-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Chambre Alexis
+r;$$$TST$$$;vt_alexis
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_bureau-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Bureau
+r;$$$TST$$$;vt_bureau;
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_ch_bas-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Chambre bas
+r;$$$TST$$$;vt_ch_bas;
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_cuisam-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Cuisne
+r;$$$TST$$$;vt_cuisam;Cuisine
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_elisa-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Chambre Elisa
+r;$$$TST$$$;vt_elisa;
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_garage-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Garage
+r;$$$TST$$$;vt_garage;
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_sdb_bas-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;SDB bas
+r;$$$TST$$$;vt_sdb_bas;
+r;#33ccff;#000000
+do;
+
