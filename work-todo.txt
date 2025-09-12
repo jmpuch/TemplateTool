@@ -1,0 +1,10 @@
+version;1
+-carte-thermostat-perso.yaml
+
+vt_alexis;Chambre Alexis
+vt_bureau;Bureau
+vt_ch_bas;Chambre bas
+vt_cuisam;Cuisine
+vt_elisa;Chambre Elisa
+vt_garage;Garage
+vt_sdb_bas;SDB bas

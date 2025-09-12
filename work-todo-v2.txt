@@ -1,0 +1,51 @@
+# File description of traitements to apply
+# this file can contain multiple sections like
+#
+# if;finelname    # input template file name with tokens to replace
+# ok;filename     # output file name to generate
+# r;token;string  # token to replace by string (you can insert multiple lines)
+# do;             # go to replace !
+# 
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_alexis-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Chambre Alexis
+r;$$$TST$$$;vt_alexis
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_bureau-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Bureau
+r;$$$TST$$$;vt_bureau;
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_ch_bas-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Chambre bas
+r;$$$TST$$$;vt_ch_bas;
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_cuisam-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Cuisne
+r;$$$TST$$$;vt_cuisam;Cuisine
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_elisa-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Chambre Elisa
+r;$$$TST$$$;vt_elisa;
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_garage-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Garage
+r;$$$TST$$$;vt_garage;
+do;
+
+if;TEMPLATE-carte-thermostat-perso.yaml
+of;vt_sdb_bas-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;SDB bas
+r;$$$TST$$$;vt_sdb_bas;
+r;#33ccff;#000000
+do;

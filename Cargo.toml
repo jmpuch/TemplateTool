@@ -1,0 +1,10 @@
+[package]
+name = "template-tool"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.5.47", features = ["cargo"] }
+env_logger = "0.11.8"
+ftail = "0.3.0"
+log = "0.4.28"
