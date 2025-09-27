@@ -7,45 +7,51 @@
 # do;             # go to replace !
 # 
 
-if;TEMPLATE-carte-thermostat-perso.yaml
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
 of;vt_alexis-carte-thermostat-perso.yaml
 r;$$$TITRE$$$;Chambre Alexis
 r;$$$TST$$$;vt_alexis
+r;$$$TEMPEXT$$$;ext
 do;
 
-if;TEMPLATE-carte-thermostat-perso.yaml
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
 of;vt_bureau-carte-thermostat-perso.yaml
 r;$$$TITRE$$$;Bureau
 r;$$$TST$$$;vt_bureau;
+r;$$$TEMPEXT$$$;ext
 do;
 
-if;TEMPLATE-carte-thermostat-perso.yaml
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
 of;vt_ch_bas-carte-thermostat-perso.yaml
 r;$$$TITRE$$$;Chambre bas
 r;$$$TST$$$;vt_ch_bas;
+r;$$$TEMPEXT$$$;ext
 do;
 
-if;TEMPLATE-carte-thermostat-perso.yaml
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
 of;vt_cuisam-carte-thermostat-perso.yaml
 r;$$$TITRE$$$;Cuisne
 r;$$$TST$$$;vt_cuisam;Cuisine
+r;$$$TEMPEXT$$$;ext
 do;
 
-if;TEMPLATE-carte-thermostat-perso.yaml
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
 of;vt_elisa-carte-thermostat-perso.yaml
 r;$$$TITRE$$$;Chambre Elisa
 r;$$$TST$$$;vt_elisa;
+r;$$$TEMPEXT$$$;ext
 do;
 
-if;TEMPLATE-carte-thermostat-perso.yaml
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
 of;vt_garage-carte-thermostat-perso.yaml
 r;$$$TITRE$$$;Garage
 r;$$$TST$$$;vt_garage;
+r;$$$TEMPEXT$$$;ext
 do;
 
-if;TEMPLATE-carte-thermostat-perso.yaml
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
 of;vt_sdb_bas-carte-thermostat-perso.yaml
 r;$$$TITRE$$$;SDB bas
 r;$$$TST$$$;vt_sdb_bas;
-r;#33ccff;#000000
+r;$$$TEMPEXT$$$;ext
 do;

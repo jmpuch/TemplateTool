@@ -1,0 +1,22 @@
+# File description of traitements to apply
+# this file can contain multiple sections like
+#
+# if;finelname    # input template file name with tokens to replace
+# ok;filename     # output file name to generate
+# r;token;string  # token to replace by string (you can insert multiple lines)
+# do;             # go to replace !
+# 
+
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
+of;p_elisa-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Chambre Elisa
+r;$$$TST$$$;p_elisa
+r;$$$TEMPEXT$$$;temp_balcon_temperature
+do;
+
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
+of;p_bureau-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Bureau
+r;$$$TST$$$;p_chbureau;
+r;$$$TEMPEXT$$$;temp_balcon_temperature
+do;
