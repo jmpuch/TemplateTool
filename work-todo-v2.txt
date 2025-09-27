@@ -30,7 +30,7 @@ do;
 
 if;TEMPLATE-carte-thermostat-perso-v2.yaml
 of;vt_cuisam-carte-thermostat-perso.yaml
-r;$$$TITRE$$$;Cuisne
+r;$$$TITRE$$$;Cuisine
 r;$$$TST$$$;vt_cuisam;Cuisine
 r;$$$TEMPEXT$$$;ext
 do;
