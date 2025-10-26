@@ -55,3 +55,10 @@ r;$$$TITRE$$$;SDB bas
 r;$$$TST$$$;vt_sdb_bas;
 r;$$$TEMPEXT$$$;ext
 do;
+
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
+of;vt_sdb_haut-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;SDB haut
+r;$$$TST$$$;vt_sdb_1;
+r;$$$TEMPEXT$$$;ext
+do;

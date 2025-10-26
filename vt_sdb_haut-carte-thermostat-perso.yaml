@@ -3,15 +3,15 @@ cards:
   - type: heading
     icon: ""
     heading_style: title
-    heading: Chambre Alexis
+    heading: SDB haut
   - type: custom:stack-in-card
     mode: horizontal
     cards:
       - show_name: true
-        name: Chambre Alexis
+        name: SDB haut
         show_icon: true
         type: custom:button-card
-        entity: climate.vt_alexis
+        entity: climate.vt_sdb_1
         section_mode: true
         size: 20%
         icon: mdi:radiator
@@ -20,7 +20,7 @@ cards:
           perform_action: climate.toggle
           target:
             entity_id:
-              - climate.vt_alexis
+              - climate.vt_sdb_1
       - type: entity
         entity: sensor.ext
         name: Exterieur
@@ -29,10 +29,10 @@ cards:
     cards:
       - type: custom:mini-graph-card
         entities:
-          - entity: sensor.vt_alexis_ema_temperature
+          - entity: sensor.vt_sdb_1_ema_temperature
             name: Température
             state_adaptive_color: true
-          - entity: climate.vt_alexis
+          - entity: climate.vt_sdb_1
             name: Temp
             attribute: current_temperature
             unit: °C
@@ -73,7 +73,7 @@ cards:
         cards:
           - type: custom:button-card
             name: hgel.
-            entity: climate.vt_alexis
+            entity: climate.vt_sdb_1
             show_state: false
             show_icon: true
             show_name: false
@@ -83,9 +83,9 @@ cards:
               icon:
                 - color: |
                     [[[
-                      if (states['climate.vt_alexis']) {
-                      if (states['climate.vt_alexis'].attributes.preset_mode == 'frost') {
-                        if (states['climate.vt_alexis'].attributes.is_on)
+                      if (states['climate.vt_sdb_1']) {
+                      if (states['climate.vt_sdb_1'].attributes.preset_mode == 'frost') {
+                        if (states['climate.vt_sdb_1'].attributes.is_on)
                           return 'skyblue';
                         else
                           return 'white';}
@@ -103,12 +103,12 @@ cards:
               perform_action: climate.set_preset_mode
               target:
                 entity_id:
-                  - climate.vt_alexis
+                  - climate.vt_sdb_1
               data:
                 preset_mode: frost
           - type: custom:button-card
             name: Eco
-            entity: climate.vt_alexis
+            entity: climate.vt_sdb_1
             show_state: false
             show_icon: true
             show_name: false
@@ -118,9 +118,9 @@ cards:
               icon:
                 - color: |
                     [[[
-                      if (states['climate.vt_alexis']) {
-                      if (states['climate.vt_alexis'].attributes.preset_mode == 'eco') {
-                        if (states['climate.vt_alexis'].attributes.is_on)
+                      if (states['climate.vt_sdb_1']) {
+                      if (states['climate.vt_sdb_1'].attributes.preset_mode == 'eco') {
+                        if (states['climate.vt_sdb_1'].attributes.is_on)
                           return 'lightgreen';
                         else
                           return 'white';
@@ -139,12 +139,12 @@ cards:
               perform_action: climate.set_preset_mode
               target:
                 entity_id:
-                  - climate.vt_alexis
+                  - climate.vt_sdb_1
               data:
                 preset_mode: eco
           - type: custom:button-card
             name: Conf.
-            entity: climate.vt_alexis
+            entity: climate.vt_sdb_1
             show_state: false
             show_icon: true
             show_name: false
@@ -154,9 +154,9 @@ cards:
               icon:
                 - color: |
                     [[[
-                      if (states['climate.vt_alexis']) {
-                      if (states['climate.vt_alexis'].attributes.preset_mode == 'comfort') {
-                        if (states['climate.vt_alexis'].attributes.is_on)
+                      if (states['climate.vt_sdb_1']) {
+                      if (states['climate.vt_sdb_1'].attributes.preset_mode == 'comfort') {
+                        if (states['climate.vt_sdb_1'].attributes.is_on)
                           return 'darkorange';
                         else
                           return 'white';
@@ -175,12 +175,12 @@ cards:
               perform_action: climate.set_preset_mode
               target:
                 entity_id:
-                  - climate.vt_alexis
+                  - climate.vt_sdb_1
               data:
                 preset_mode: comfort
           - type: custom:button-card
             name: Boost
-            entity: climate.vt_alexis
+            entity: climate.vt_sdb_1
             show_state: false
             show_icon: true
             show_name: false
@@ -190,9 +190,9 @@ cards:
               icon:
                 - color: |
                     [[[
-                      if (states['climate.vt_alexis']) {
-                      if (states['climate.vt_alexis'].attributes.preset_mode == 'boost') {
-                        if (states['climate.vt_alexis'].attributes.is_on)
+                      if (states['climate.vt_sdb_1']) {
+                      if (states['climate.vt_sdb_1'].attributes.preset_mode == 'boost') {
+                        if (states['climate.vt_sdb_1'].attributes.is_on)
                           return 'red';
                         else
                           return 'white';}
@@ -210,12 +210,12 @@ cards:
               perform_action: climate.set_preset_mode
               target:
                 entity_id:
-                  - climate.vt_alexis
+                  - climate.vt_sdb_1
               data:
                 preset_mode: boost
           - type: custom:button-card
             name: Manu
-            entity: climate.vt_alexis
+            entity: climate.vt_sdb_1
             show_state: false
             show_icon: true
             show_name: false
@@ -225,9 +225,9 @@ cards:
               icon:
                 - color: |
                     [[[
-                      if (states['climate.vt_alexis']) {
-                      if (states['climate.vt_alexis'].attributes.preset_mode == 'none'){
-                        if (states['climate.vt_alexis'].attributes.is_on)
+                      if (states['climate.vt_sdb_1']) {
+                      if (states['climate.vt_sdb_1'].attributes.preset_mode == 'none'){
+                        if (states['climate.vt_sdb_1'].attributes.is_on)
                           return 'orange';
                         else
                           return 'white';}
@@ -245,7 +245,7 @@ cards:
               perform_action: climate.set_preset_mode
               target:
                 entity_id:
-                  - climate.vt_alexis
+                  - climate.vt_sdb_1
               data:
                 preset_mode: none
       - type: custom:stack-in-card
@@ -255,7 +255,7 @@ cards:
             cards:
               - type: custom:button-card
                 name: Pres
-                entity: climate.vt_alexis
+                entity: climate.vt_sdb_1
                 show_state: false
                 show_icon: true
                 show_name: false
@@ -265,8 +265,8 @@ cards:
                   icon:
                     - color: |
                         [[[
-                          if (states['climate.vt_alexis']) {
-                          if (states['climate.vt_alexis'].attributes.presence_state == 'on')
+                          if (states['climate.vt_sdb_1']) {
+                          if (states['climate.vt_sdb_1'].attributes.presence_state == 'on')
                             return 'green';
                           else
                             return 'gray'; }
@@ -279,7 +279,7 @@ cards:
                     - width: 30px
               - type: custom:button-card
                 name: Wind
-                entity: climate.vt_alexis
+                entity: climate.vt_sdb_1
                 show_state: false
                 show_icon: true
                 show_name: false
@@ -289,8 +289,8 @@ cards:
                   icon:
                     - color: |
                         [[[
-                          if (states['climate.vt_alexis']) {
-                          if (states['climate.vt_alexis'].attributes.window_state == 'on')
+                          if (states['climate.vt_sdb_1']) {
+                          if (states['climate.vt_sdb_1'].attributes.window_state == 'on')
                             return 'red';
                           else
                             return 'gray'; }
@@ -306,18 +306,18 @@ cards:
                 layout: horizontal
                 tap_action:
                   action: more-info
-                entity: sensor.vt_alexis_power_percent
+                entity: sensor.vt_sdb_1_power_percent
                 fill_container: false
                 multiline_secondary: false
                 primary: |
-                  {% if (states['climate.vt_alexis'].attributes.is_on) -%}
-                      Power = {{ states('sensor.vt_alexis_power_percent') }} %
+                  {% if (states['climate.vt_sdb_1'].attributes.is_on) -%}
+                      Power = {{ states('sensor.vt_sdb_1_power_percent') }} %
                   {%- else -%}
                       Power off
                   {%- endif %}
                 icon: ""
       - type: custom:mushroom-climate-card
-        entity: climate.vt_alexis
+        entity: climate.vt_sdb_1
         show_temperature_control: true
         hvac_modes: []
         tap_action:

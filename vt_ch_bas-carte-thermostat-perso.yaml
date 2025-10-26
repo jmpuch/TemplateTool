@@ -84,10 +84,13 @@ cards:
                 - color: |
                     [[[
                       if (states['climate.vt_ch_bas']) {
-                      if (states['climate.vt_ch_bas'].attributes.is_on && states['climate.vt_ch_bas'].attributes.preset_mode == 'frost')
-                        return 'skyblue';
+                      if (states['climate.vt_ch_bas'].attributes.preset_mode == 'frost') {
+                        if (states['climate.vt_ch_bas'].attributes.is_on)
+                          return 'skyblue';
+                        else
+                          return 'white';}
                       else
-                        return 'white'; }
+                        return 'gray'; }
                     ]]]
               name:
                 - color: white
@@ -116,10 +119,14 @@ cards:
                 - color: |
                     [[[
                       if (states['climate.vt_ch_bas']) {
-                      if (states['climate.vt_ch_bas'].attributes.is_on && states['climate.vt_ch_bas'].attributes.preset_mode == 'eco')
-                        return 'lightgreen';
+                      if (states['climate.vt_ch_bas'].attributes.preset_mode == 'eco') {
+                        if (states['climate.vt_ch_bas'].attributes.is_on)
+                          return 'lightgreen';
+                        else
+                          return 'white';
+                        }
                       else
-                        return 'white'; }
+                        return 'gray'; }
                     ]]]
               name:
                 - color: white
@@ -148,10 +155,14 @@ cards:
                 - color: |
                     [[[
                       if (states['climate.vt_ch_bas']) {
-                      if (states['climate.vt_ch_bas'].attributes.is_on && states['climate.vt_ch_bas'].attributes.preset_mode == 'comfort')
-                        return 'darkorange';
+                      if (states['climate.vt_ch_bas'].attributes.preset_mode == 'comfort') {
+                        if (states['climate.vt_ch_bas'].attributes.is_on)
+                          return 'darkorange';
+                        else
+                          return 'white';
+                        }
                       else
-                        return 'white'; }
+                        return 'gray'; }
                     ]]]
               name:
                 - color: white
@@ -180,10 +191,13 @@ cards:
                 - color: |
                     [[[
                       if (states['climate.vt_ch_bas']) {
-                      if (states['climate.vt_ch_bas'].attributes.is_on && states['climate.vt_ch_bas'].attributes.preset_mode == 'boost')
-                        return 'red';
+                      if (states['climate.vt_ch_bas'].attributes.preset_mode == 'boost') {
+                        if (states['climate.vt_ch_bas'].attributes.is_on)
+                          return 'red';
+                        else
+                          return 'white';}
                       else
-                        return 'white'; }
+                        return 'gray'; }
                     ]]]
               name:
                 - color: white
@@ -212,10 +226,13 @@ cards:
                 - color: |
                     [[[
                       if (states['climate.vt_ch_bas']) {
-                      if (states['climate.vt_ch_bas'].attributes.is_on && states['climate.vt_ch_bas'].attributes.preset_mode == 'none')
-                        return 'indianred';
+                      if (states['climate.vt_ch_bas'].attributes.preset_mode == 'none'){
+                        if (states['climate.vt_ch_bas'].attributes.is_on)
+                          return 'orange';
+                        else
+                          return 'white';}
                       else
-                        return 'white'; }
+                        return 'gray'; }
                     ]]]
               name:
                 - color: white
@@ -252,7 +269,7 @@ cards:
                           if (states['climate.vt_ch_bas'].attributes.presence_state == 'on')
                             return 'green';
                           else
-                            return 'white'; }
+                            return 'gray'; }
                         ]]]
                   name:
                     - color: white
@@ -276,7 +293,7 @@ cards:
                           if (states['climate.vt_ch_bas'].attributes.window_state == 'on')
                             return 'red';
                           else
-                            return 'white'; }
+                            return 'gray'; }
                         ]]]
                   name:
                     - color: white
