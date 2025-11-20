@@ -85,7 +85,7 @@ cards:
                     [[[
                       if (states['climate.vt_bureau']) {
                       if (states['climate.vt_bureau'].attributes.preset_mode == 'frost') {
-                        if (states['climate.vt_bureau'].attributes.is_on)
+                        if (states['climate.vt_bureau'].attributes.specific_states.is_on)
                           return 'skyblue';
                         else
                           return 'white';}
@@ -120,7 +120,7 @@ cards:
                     [[[
                       if (states['climate.vt_bureau']) {
                       if (states['climate.vt_bureau'].attributes.preset_mode == 'eco') {
-                        if (states['climate.vt_bureau'].attributes.is_on)
+                        if (states['climate.vt_bureau'].attributes.specific_states.is_on)
                           return 'lightgreen';
                         else
                           return 'white';
@@ -156,7 +156,7 @@ cards:
                     [[[
                       if (states['climate.vt_bureau']) {
                       if (states['climate.vt_bureau'].attributes.preset_mode == 'comfort') {
-                        if (states['climate.vt_bureau'].attributes.is_on)
+                        if (states['climate.vt_bureau'].attributes.specific_states.is_on)
                           return 'darkorange';
                         else
                           return 'white';
@@ -192,7 +192,7 @@ cards:
                     [[[
                       if (states['climate.vt_bureau']) {
                       if (states['climate.vt_bureau'].attributes.preset_mode == 'boost') {
-                        if (states['climate.vt_bureau'].attributes.is_on)
+                        if (states['climate.vt_bureau'].attributes.specific_states.is_on)
                           return 'red';
                         else
                           return 'white';}
@@ -227,7 +227,7 @@ cards:
                     [[[
                       if (states['climate.vt_bureau']) {
                       if (states['climate.vt_bureau'].attributes.preset_mode == 'none'){
-                        if (states['climate.vt_bureau'].attributes.is_on)
+                        if (states['climate.vt_bureau'].attributes.specific_states.is_on)
                           return 'orange';
                         else
                           return 'white';}
@@ -291,6 +291,30 @@ cards:
                         [[[
                           if (states['climate.vt_bureau']) {
                           if (states['climate.vt_bureau'].attributes.window_state == 'on')
+                            return 'red';
+                          else
+                            return 'gray'; }
+                        ]]]
+                  name:
+                    - color: white
+                    - font-size: 60%
+                  card:
+                    - height: 40px
+                    - width: 30px
+              - type: custom:button-card
+                name: Heat
+                entity: climate.vt_bureau
+                show_state: false
+                show_icon: true
+                show_name: false
+                icon: mdi:fire
+                size: 80%
+                styles:
+                  icon:
+                    - color: |
+                        [[[
+                          if (states['climate.vt_bureau']) {
+                          if (states['climate.vt_bureau'].attributes.hvac_action == 'heating')
                             return 'red';
                           else
                             return 'gray'; }
