@@ -310,7 +310,7 @@ cards:
                 fill_container: false
                 multiline_secondary: false
                 primary: |
-                  {% if (states['climate.vt_sdb_1'].attributes.is_on) -%}
+                  {% if (states['climate.vt_sdb_1'].attributes.specific_states.is_on) -%}
                       Power = {{ states('sensor.vt_sdb_1_power_percent') }} %
                   {%- else -%}
                       Power off

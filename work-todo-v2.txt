@@ -62,3 +62,24 @@ r;$$$TITRE$$$;SDB haut
 r;$$$TST$$$;vt_sdb_1;
 r;$$$TEMPEXT$$$;ext
 do;
+
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
+of;vt_grenier-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Grenier
+r;$$$TST$$$;vt_grenier;
+r;$$$TEMPEXT$$$;ext
+do;
+
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
+of;p_elisa-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Chambre Elisa
+r;$$$TST$$$;p_elisa
+r;$$$TEMPEXT$$$;temp_balcon_temperature
+do;
+
+if;TEMPLATE-carte-thermostat-perso-v2.yaml
+of;p_bureau-carte-thermostat-perso.yaml
+r;$$$TITRE$$$;Bureau
+r;$$$TST$$$;p_chbureau;
+r;$$$TEMPEXT$$$;temp_balcon_temperature
+do;

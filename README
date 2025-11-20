@@ -6,6 +6,7 @@ But it works (seems to...)
 1. Install Rust and clone this repository.
 2. Build the project with `cargo build`.
 3. Run the tool using `cargo run`.
+example : cargo run -- -i work-todo-v2.txt
 
 ### Authorized Options
 
